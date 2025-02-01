@@ -8,7 +8,8 @@ const db_url = "mongodb://127.0.0.1:27017/Sandesh";
 let atlas_url=process.env.ATLAS_URL;
 
 async function main() {
-    await mongoose.connect(atlas_url);
+    await mongoose.connect(atlas_url,{useNewUrlParser: true,
+        useUnifiedTopology: true,});
 }
 main().then(() => {
     console.log("database connected successfully");
