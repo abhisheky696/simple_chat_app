@@ -3,7 +3,7 @@ import cors from "cors"
 import main from "./initDB/index.js"
 import chatRouter from "./routes/chat.js"
 const app = express();
-const port = 8080
+const port = 8000
 
 main();
 

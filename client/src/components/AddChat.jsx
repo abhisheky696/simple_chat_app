@@ -9,7 +9,7 @@ const AddChat = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("https://chat-notes1.onrender.com/users", {
+            await axios.post("http://localhost:8000/users", {
                 sender,
                 message,
                 receiver,

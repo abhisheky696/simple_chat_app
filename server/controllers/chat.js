@@ -1,12 +1,25 @@
 import Chat from "../Models/chat.js";
 export const root = async (req, res) => {
+    // try {
+    //     res.send({
+    //         success: true,
+    //         message: "root route is working well",
+    //     });
+    // } catch (err) {
+    //     console.log("some error occured in the route route", err);
+    //     res.send({
+    //         success: false,
+    //         message: err.message,
+    //     });
+    // }
     try {
+        let users = await Chat.find({});
         res.send({
             success: true,
-            message: "root route is working well",
+            data: users,
         });
     } catch (err) {
-        console.log("some error occured in the routre route", err);
+        console.log("some error occured while listing all users", err);
         res.send({
             success: false,
             message: err.message,

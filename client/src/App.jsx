@@ -8,6 +8,7 @@ export const App = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/users" element={<Showpage/>}></Route>
+                <Route path="/" element={<Showpage/>}></Route>
                 <Route path="/users/addChat" element={<AddChat/>}></Route>
                 <Route path="/users/editChat/:id" element={<EditChat/>}></Route>
             </Routes>

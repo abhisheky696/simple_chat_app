@@ -8,7 +8,7 @@ const Showpage = () => {
     const [users, setUsers] = useState([]);
     const fetchData = async () => {
         try {
-            let response = await axios.get("https://chat-notes1.onrender.com/users");
+            let response = await axios.get("http://localhost:8000/users");
             //console.log(response.data.data)
             setUsers(response.data.data);
         } catch (err) {
