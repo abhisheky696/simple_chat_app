@@ -8,7 +8,7 @@ const Showpage = () => {
     const [users, setUsers] = useState([]);
     const fetchData = async () => {
         try {
-            let response = await axios.get("http://localhost:8080/users");
+            let response = await axios.get("https://chat-notes1.onrender.com/users");
             //console.log(response.data.data)
             setUsers(response.data.data);
         } catch (err) {
@@ -19,7 +19,7 @@ const Showpage = () => {
     };
     const handleDelete = async (id) => {
         try {
-            await axios.delete("http://localhost:8080/users/delete/"+id)
+            await axios.delete("https://chat-notes1.onrender.com/users/delete/"+id)
             window.location.reload();
         }
         catch(err) {

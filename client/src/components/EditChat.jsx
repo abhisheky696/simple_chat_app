@@ -11,7 +11,7 @@ const EditChat = () => {
     const [message,setMessage]=useState("")
     const fetchData = async () => {
         try {
-            let response=await axios.get("http://localhost:8080/users/"+id)
+            let response=await axios.get("https://chat-notes1.onrender.com/users/"+id)
             //console.log(response?.data?.user)
             let {sender,message,receiver}=response?.data?.user;
             setSender(sender)
@@ -24,7 +24,7 @@ const EditChat = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.patch(`http://localhost:8080/users/edit/${id}`,{
+            await axios.patch(`https://chat-notes1.onrender.com//users/edit/${id}`,{
             sender,message,receiver
             })
             navigate('/users')
